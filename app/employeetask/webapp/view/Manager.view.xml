@@ -1,0 +1,135 @@
+<mvc:View controllerName="com.app.employeetask.controller.Manager"
+ displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Title
+        id="idTitleManagerPage_MNG"
+        text="Manager Page"
+    />
+    <Table
+        id="idTableUSers_MNG"
+        mode="SingleSelectMaster"
+        selectionChange="onSelectEmployee"
+        items="{
+            path: '/Users',
+            filters: [
+                { path: 'role_ID', operator: 'EQ', value1: 'RO04' },
+                { path: 'role_ID', operator: 'EQ', value1: 'RO03' }
+            ]
+        }"
+        width="50%"
+    >
+        <columns>
+            <Column id="idTableColumnUserID_MNG">
+                <Text
+                    id="idTableTextID_MNG"
+                    text="ID"
+                />
+            </Column>
+            <Column id="idTableColumnUserName_MNG">
+                <Text
+                    id="idTableTextName_MNG"
+                    text="Name"
+                />
+            </Column>
+            <Column id="idTableColumnUserRole_MNG">
+                <Text
+                    id="idTableTextRole_MNG"
+                    text="Role"
+                />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem id="idTableColumnListItemUser_MNG">
+                <cells>
+                    <Text
+                        id="idTableCellTextID_MNG"
+                        text="{userID}"
+                    />
+                    <Text
+                        id="idTableCellTextName_MNG"
+                        text="{name}"
+                    />
+                    <Text
+                        id="idTableCellTextRoleID_MNG"
+                        text="{role_ID}"
+                    />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+    <Title
+        id="idTaskInfoHeading_MNG"
+        class="sapUiTinyMarginTop"
+        text="Task Information"
+        visible="false"
+    />
+    <Table
+        id="idTableTasks_MNG"
+        width="50%"
+        visible="false"
+        items="{
+            path: '/Task'
+        }"
+    >
+        <columns>
+            <Column id="idTableColumnTaskID_MNG">
+                <Text
+                    id="idTableColumnTextTaskID_MNG"
+                    text="Task ID"
+                />
+            </Column>
+            <Column id="idTableColumnTaskType_MNG">
+                <Text
+                    id="idTableColumnTextType_MNG"
+                    text="Type"
+                />
+            </Column>
+            <Column id="idTableColumnTaskPriority_MNG">
+                <Text
+                    id="idTableColumnTextPriority_MNG"
+                    text="Priority"
+                />
+            </Column>
+            <Column id="idTableColumnTaskAssignedAt_MNG">
+                <Text
+                    id="idTableColumnTextAssignedAt_MNG"
+                    text="Assigned At"
+                />
+            </Column>
+            <Column id="idTableColumnTaskComments_MNG">
+                <Text
+                    id="idTableColumnTextComments_MNG"
+                    text="Comments"
+                />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem id="idTableColumnListItems_MNG">
+                <cells>
+                    <Text
+                        id="idTableColumnListItemsTextID_MNG"
+                        text="{ID}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextType_MNG"
+                        text="{type}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextPriority_MNG"
+                        text="{priority}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextAssignedAt_MNG"
+                        text="{assignat}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextComments_MNG"
+                        text="{comment}"
+                    />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

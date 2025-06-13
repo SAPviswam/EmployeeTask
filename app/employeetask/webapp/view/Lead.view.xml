@@ -1,0 +1,133 @@
+<mvc:View
+    controllerName="com.app.employeetask.controller.Lead"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+     xmlns:f="sap.f">
+
+    <Page title="Lead Page" >
+            <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Title id="idLeadpageTitle" text="Lead Page" class="sapUiTinyMarginBeginEnd"/>
+                </contentLeft>
+                <contentRight>
+                    <Avatar
+                        id="idLeadAvatar"
+                        displayShape="Circle"
+                displaySize="XS"
+                press="onPressAvatar"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+
+        <Table
+            id="idTableUsers"
+            items="{
+                path: '/Users'
+            }"
+             mode="SingleSelectMaster"
+            selectionChange="onSelectEmployee">
+            <columns>
+                <Column>
+                    <Text text="User ID"/>
+                </Column>
+                <Column>
+                    <Text text="Name"/>
+                </Column>
+                <Column>
+                    <Text text="E-mail"/>
+                </Column>
+                <Column>
+                    <Text text="Role"/>
+                </Column>
+                <Column>
+                    <Text text="Domain"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{userID}"/>
+                        <Text text="{name}"/>
+                        <Text text="{mail}"/>
+                        <Text text="{role_ID}"/>
+                        <Text text="{domain_ID}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <Title
+        id="idTaskInfoHeading_LEAD"
+        class="sapUiTinyMarginTop"
+        text="Task Information"
+        visible="false"
+    />
+    <Table
+        id="idTableTasks_LEAD"
+        width="50%"
+        visible="false"
+        items="{
+            path: '/Task'
+        }"
+    >
+        <columns>
+            <Column id="idTableColumnTaskID_LEAD">
+                <Text
+                    id="idTableColumnTextTaskID_LEAD"
+                    text="Task ID"
+                />
+            </Column>
+            <Column id="idTableColumnTaskType_LEAD">
+                <Text
+                    id="idTableColumnTextType_LEAD"
+                    text="Type"
+                />
+            </Column>
+            <Column id="idTableColumnTaskPriority_LEAD">
+                <Text
+                    id="idTableColumnTextPriority_LEAD"
+                    text="Priority"
+                />
+            </Column>
+            <Column id="idTableColumnTaskAssignedAt_LEAD">
+                <Text
+                    id="idTableColumnTextAssignedAt_LEAD"
+                    text="Assigned At"
+                />
+            </Column>
+            <Column id="idTableColumnTaskComments_LEAD">
+                <Text
+                    id="idTableColumnTextComments_LEAD"
+                    text="Comments"
+                />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem id="idTableColumnListItems_LEAD">
+                <cells>
+                    <Text
+                        id="idTableColumnListItemsTextID_LEAD"
+                        text="{ID}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextType_LEAD"
+                        text="{type}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextPriority_LEAD"
+                        text="{priority}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextAssignedAt_LEAD"
+                        text="{assignat}"
+                    />
+                    <Text
+                        id="idTableColumnListItemsTextComments_LEAD"
+                        text="{comment}"
+                    />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+    </Page>
+</mvc:View>

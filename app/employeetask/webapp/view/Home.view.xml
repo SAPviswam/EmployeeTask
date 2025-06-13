@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.app.employeetask.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <VBox id="idForm" width="100px" >
+    <Input id="idUserID" placeholder="User ID" type="Text"></Input>
+    <Input id="idPassword" placeholder="Password" type="Password"></Input>
+    </VBox>
+    <Button id="idBtnNext" text="Next" press="onPressNxt"></Button>
+    </Page>
+</mvc:View>

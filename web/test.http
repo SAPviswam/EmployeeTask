@@ -1,0 +1,194 @@
+####To know the Models/Entity data
+GET http://localhost:4004/TaskSRV
+####To know the Individual Data Models/Entity
+# GET http://localhost:4004/odata/v4/catalog/<Entity>
+GET http://localhost:4004/TaskSRV/Role
+#### Create Entries in the Role Entity
+POST http://localhost:4004/TaskSRV/Role
+Content-Type: application/json
+
+{
+    "ID":"RO01",
+    "role":"Admin"
+}
+
+#### Create Entries in the Role Entity
+POST http://localhost:4004/TaskSRV/Role
+Content-Type: application/json
+
+{
+    "ID":"RO02",
+    "role":"Manager"
+}
+#### Create Entries in the Role Entity
+POST http://localhost:4004/TaskSRV/Role
+Content-Type: application/json
+
+{
+    "ID":"RO03",
+    "role":"Lead"
+}
+#### Create Entries in the Role Entity
+POST http://localhost:4004/TaskSRV/Role
+Content-Type: application/json
+
+{
+    "ID":"RO04",
+    "role":"Member"
+}
+### Read data in Domain Entity
+GET http://localhost:4004/TaskSRV/Domain
+### Create Entries in the Domain Entity
+POST http://localhost:4004/TaskSRV/Domain
+Content-Type: application/json
+
+{
+    "ID":"DOM01",
+    "domain":"All"
+}
+### Create Entries in the Domain Entity
+POST http://localhost:4004/TaskSRV/Domain
+Content-Type: application/json
+
+{
+    "ID":"DOM02",
+    "domain":"BTP"
+}
+### Create Entries in the Domain Entity
+POST http://localhost:4004/TaskSRV/Domain
+Content-Type: application/json
+
+{
+    "ID":"DOM03",
+    "domain":"EWM"
+}
+### GEt Users Data
+GET http://localhost:4004/TaskSRV/Users
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User01",
+    "password" : "12345",
+    "name" : "Name1",
+    "mail" : "email@gmail.com",
+    "role_ID" : "RO01",
+    "domain_ID" : "DOM01"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User02",
+    "password" : "12345",
+    "name" : "Name2",
+    "mail" : "email2@gmail.com",
+    "role_ID" : "RO02",
+    "domain_ID" : "DOM02"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User03",
+    "password" : "12345",
+    "name" : "Name3",
+    "mail" : "email3@gmail.com",
+    "role_ID" : "RO03",
+    "domain_ID" : "DOM02"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User04",
+    "password" : "12345",
+    "name" : "Name4",
+    "mail" : "email4@gmail.com",
+    "role_ID" : "RO04",
+    "domain_ID" : "DOM02"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User05",
+    "password" : "12345",
+    "name" : "Name5",
+    "mail" : "email5@gmail.com",
+    "role_ID" : "RO04",
+    "domain_ID" : "DOM02"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User06",
+    "password" : "12345",
+    "name" : "Name6",
+    "mail" : "email6@gmail.com",
+    "role_ID" : "RO04",
+    "domain_ID" : "DOM03"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User07",
+    "password" : "12345",
+    "name" : "Name7",
+    "mail" : "email7@gmail.com",
+    "role_ID" : "RO04",
+    "domain_ID" : "DOM02"
+}
+### Create Entries in the Users Entity
+POST http://localhost:4004/TaskSRV/Users
+Content-Type: application/json
+
+{
+    "userID" : "User08",
+    "password" : "12345",
+    "name" : "Name8",
+    "mail" : "email8@gmail.com",
+    "role_ID" : "RO03",
+    "domain_ID" : "DOM03"
+}
+### Read data in Task Entity
+GET http://localhost:4004/TaskSRV/Task
+### Create Entries in the Task Entity
+POST http://localhost:4004/TaskSRV/Task
+Content-Type: application/json
+
+{
+ "ID"           : "Task01",
+  "type"        : "Assigned",
+  "priority"    : "Medium",
+  "assignat"    : "2025-06-11T10:15:30Z",
+  "assignby_userID"    : "User03",
+  "assignto_userID"    : "User04",
+  "acccompdate" : "2025-06-13",
+  "compdate"    : "2025-06-12T14:05:00Z",
+  "comment"     : "Completed"
+}
+### Create Entries in the Task Entity
+POST http://localhost:4004/TaskSRV/Task
+Content-Type: application/json
+
+{
+ "ID"           : "Task02",
+  "type"        : "Assigned",
+  "priority"    : "Medium",
+  "assignat"    : "2025-06-11T10:15:30Z",
+  "assignby_userID"    : "User03",
+  "assignto_userID"    : "User05",
+  "acccompdate" : "2025-06-13",
+  "compdate"    : "2025-06-12T14:05:00Z",
+  "comment"     : "Completed"
+}

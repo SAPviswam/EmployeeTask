@@ -1,0 +1,150 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "com.app.employeetask",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.0",
+      "toolsId": "648b50a0-2226-4e0d-aa1f-2dd3ce915326"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/TaskSRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.136.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.app.employeetask.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.app.employeetask.view",
+        "async": true,
+        "viewPath": "com.app.employeetask.view"
+      },
+      "routes": [
+        {
+          "name": "RouteHome",
+          "pattern": ":?query:",
+          "target": [
+            "TargetHome"
+          ]
+        },
+        {
+          "name": "RouteAdmin",
+          "pattern": "Admin/{userId} ",
+          "target": [
+            "TargetAdmin"
+          ]
+        },
+        {
+          "name": "RouteManager",
+          "pattern": "Manager/{userId} ",
+          "target": [
+            "TargetManager"
+          ]
+        },
+        {
+          "name": "RouteLead",
+          "pattern": "Lead/{userId}/{domainId} ",
+          "target": [
+            "TargetLead"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetHome": {
+          "id": "Home",
+          "name": "Home"
+        },
+        "TargetAdmin": {
+          "id": "Admin",
+          "name": "Admin"
+        },
+        "TargetManager": {
+          "id": "Manager",
+          "name": "Manager"
+        },
+        "TargetLead": {
+          "id": "Lead",
+          "name": "Lead"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.app.employeetask.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
