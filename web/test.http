@@ -69,7 +69,7 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User01",
+    "userID" : "User001",
     "password" : "12345",
     "name" : "Name1",
     "mail" : "email@gmail.com",
@@ -81,19 +81,19 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User02",
+    "userID" : "User002",
     "password" : "12345",
     "name" : "Name2",
     "mail" : "email2@gmail.com",
     "role_ID" : "RO02",
-    "domain_ID" : "DOM02"
+    "domain_ID" : "DOM01"
 }
 ### Create Entries in the Users Entity
 POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User03",
+    "userID" : "User003",
     "password" : "12345",
     "name" : "Name3",
     "mail" : "email3@gmail.com",
@@ -105,7 +105,7 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User04",
+    "userID" : "User004",
     "password" : "12345",
     "name" : "Name4",
     "mail" : "email4@gmail.com",
@@ -117,7 +117,7 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User05",
+    "userID" : "User005",
     "password" : "12345",
     "name" : "Name5",
     "mail" : "email5@gmail.com",
@@ -129,7 +129,7 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User06",
+    "userID" : "User006",
     "password" : "12345",
     "name" : "Name6",
     "mail" : "email6@gmail.com",
@@ -141,7 +141,7 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User07",
+    "userID" : "User007",
     "password" : "12345",
     "name" : "Name7",
     "mail" : "email7@gmail.com",
@@ -153,7 +153,7 @@ POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
 
 {
-    "userID" : "User08",
+    "userID" : "User008",
     "password" : "12345",
     "name" : "Name8",
     "mail" : "email8@gmail.com",
@@ -171,8 +171,8 @@ Content-Type: application/json
   "type"        : "Assigned",
   "priority"    : "Medium",
   "assignat"    : "2025-06-11T10:15:30Z",
-  "assignby_userID"    : "User03",
-  "assignto_userID"    : "User04",
+  "assignby_userID"    : "User003",
+  "assignto_userID"    : "User004",
   "acccompdate" : "2025-06-13",
   "compdate"    : "2025-06-12T14:05:00Z",
   "comment"     : "Completed"
@@ -186,8 +186,8 @@ Content-Type: application/json
   "type"        : "Assigned",
   "priority"    : "Medium",
   "assignat"    : "2025-06-11T10:15:30Z",
-  "assignby_userID"    : "User03",
-  "assignto_userID"    : "User05",
+  "assignby_userID"    : "User003",
+  "assignto_userID"    : "User005",
   "acccompdate" : "2025-06-13",
   "compdate"    : "2025-06-12T14:05:00Z",
   "comment"     : "Completed"

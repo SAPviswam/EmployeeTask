@@ -1,0 +1,33 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog
+    id="idCreateUserDialog"
+    title="Create New User"
+    draggable="true"
+    resizable="true"
+    contentWidth="400px"
+  >
+    <VBox id="idCreateUserVBox" class="sapUiSmallMargin">
+      <Input id="idInputName" placeholder="Name" />
+      <Input id="idInputEmail" placeholder="E-mail" />
+      <Select id="idSelectRole" forceSelection="true" items="{
+        path: '/Role',
+        sorter: { path: 'role' }
+      }">
+        <core:Item id="idCreateUserRoleItem" key="{ID}" text="{role}" />
+      </Select>
+      <Select id="idSelectDomain" forceSelection="true" items="{
+        path: '/Domain',
+        sorter: { path: 'domain' }
+      }">
+        <core:Item id="idCreateUserDomainItem" key="{ID}" text="{domain}" />
+      </Select>
+    </VBox>
+
+    <beginButton>
+      <Button id="idCreateUserSaveButton" text="Save" press="onSaveNewUser" />
+    </beginButton>
+    <endButton>
+      <Button id="idCreateUserCancelButton" text="Cancel" press="onCancelCreateUser" />
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

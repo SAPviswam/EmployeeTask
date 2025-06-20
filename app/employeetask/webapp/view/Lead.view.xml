@@ -4,21 +4,27 @@
     xmlns="sap.m"
      xmlns:f="sap.f">
 
-    <Page title="Lead Page" >
+    <Page  id="idLeadpage_AD" title="Lead Page" >
             <customHeader>
-            <Bar>
-                <contentLeft>
-                    <Title id="idLeadpageTitle" text="Lead Page" class="sapUiTinyMarginBeginEnd"/>
-                </contentLeft>
-                <contentRight>
-                    <Avatar
-                        id="idLeadAvatar"
-                        displayShape="Circle"
-                displaySize="XS"
-                press="onPressAvatar"/>
-                </contentRight>
-            </Bar>
-        </customHeader>
+                <Bar id="idbar_LEAD">
+                    <contentLeft>
+                        <Title
+                            id="idLeadpageTitle"
+                            text="Lead Page"
+                            class="sapUiTinyMarginBeginEnd"
+                        />
+                    </contentLeft>
+                    <contentRight>
+                        <Avatar
+                            id="idLeadAvatar"
+                            displayShape="Circle"
+                            displaySize="XS"
+                            press="onPressAvatar"
+                            tooltip="User infromation"
+                        />
+                    </contentRight>
+                </Bar>
+            </customHeader>
 
         <Table
             id="idTableUsers"
@@ -28,30 +34,30 @@
              mode="SingleSelectMaster"
             selectionChange="onSelectEmployee">
             <columns>
-                <Column>
-                    <Text text="User ID"/>
+                <Column id="idTableColumnUserID_LEAD">
+                    <Text id="idTableTextID_LEAD" text="User ID"/>
                 </Column>
-                <Column>
-                    <Text text="Name"/>
+                <Column id="idTableColumnUserName_LEAD">
+                    <Text  id="idTableTextName_LEAD" text="Name"/>
                 </Column>
-                <Column>
-                    <Text text="E-mail"/>
+                <Column id="idTableColumnUserEmail_LEAD">
+                    <Text id="idTableTextEmail_LEAD" text="E-mail"/>
                 </Column>
-                <Column>
-                    <Text text="Role"/>
+                <Column id="idTableColumnUserRole_LEAD">
+                    <Text id="idTableTextRole_LEAD" text="Role"/>
                 </Column>
-                <Column>
-                    <Text text="Domain"/>
+                <Column id="idTableColumnUserDomain_LEAD">
+                    <Text id="idTableTextDomain_LEAD" text="Domain"/>
                 </Column>
             </columns>
             <items>
-                <ColumnListItem>
+                <ColumnListItem id="idTableUsersColumnListItems_LEAD">
                     <cells>
-                        <Text text="{userID}"/>
-                        <Text text="{name}"/>
-                        <Text text="{mail}"/>
-                        <Text text="{role_ID}"/>
-                        <Text text="{domain_ID}"/>
+                        <Text id="idTableColumnListItemsTextUserID_LEAD" text="{userID}"/>
+                        <Text id="idTableColumnListItemsTextName_LEAD" text="{name}"/>
+                        <Text  id="idTableColumnListItemsTextEmail_LEAD" text="{mail}"/>
+                        <Text id="idTableColumnListItemsTextRoleID_LEAD" text="{role_ID}"/>
+                        <Text id="idTableColumnListItemsTextDomainID_LEAD" text="{domain_ID}"/>
                     </cells>
                 </ColumnListItem>
             </items>
@@ -103,7 +109,7 @@
             </Column>
         </columns>
         <items>
-            <ColumnListItem id="idTableColumnListItems_LEAD">
+            <ColumnListItem id="idTableTaskColumnListItems_LEAD">
                 <cells>
                     <Text
                         id="idTableColumnListItemsTextID_LEAD"

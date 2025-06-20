@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+<Popover id="idUserInfoPopover"
+  title="User Information"
+  placement="Bottom"
+  showHeader="true"
+  class="sapUiContentPadding"
+>
+    <FlexBox  id="idUserInfoPopoverFlexBox" direction="Column" alignItems="Start" justifyContent="Start" class="sapUiSmallMargin">
+    
+    <HBox id="idUserInfoPopoverNameHBox">
+      <Text id="idUserInfoPopoverNameText" text="Name" class="sapUiTinyMarginEnd"/>
+     
+            
+      <Text id="idUserInfoPopoverNameTextValue" text=": {/name}" />
+ </HBox>
+    <HBox id="idUserInfoPopoverIDHBox" >
+      <Text id="idUserInfoPopoverIDText" text="ID"  class="sapUiMediumMarginEnd"/>
+       
+      <Text id="idUserInfoPopoverIDTextValue" text=": {/userID}" />
+    </HBox>
+
+    <HBox id="idUserInfoPopoverEmailHBox">
+      <Text id="idUserInfoPopoverEmailText" text="E-mail " class="sapUiTinyMarginEnd" />
+       
+      <Text id="idUserInfoPopoverEmailValue" text=": {/mail}" />
+    </HBox>
+
+    <HBox id="idUserInfoPopoverRoleHBox">
+      <Text id="idUserInfoPopoverRoleText" text="Role " class="sapUiSmallMarginEnd"/>
+       
+      <Text id="idUserInfoPopoverRoleValue" text=": {/role/role}" />
+    </HBox>
+  </FlexBox>
+</Popover>
+</core:FragmentDefinition>

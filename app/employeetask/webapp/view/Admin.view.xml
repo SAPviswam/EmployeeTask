@@ -4,133 +4,170 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
 >
-    <Title
-        id="idTitleAdminPage_AD"
-        text="Admin Page"
-    />
-    <Table
-        id="idTableUSers_AD"
-        mode="SingleSelectMaster"
-        selectionChange="onSelectEmployee"
-        items="{
+    <Page
+        id="idAdminpage_AD"
+        title="Lead Page"
+    >
+        <customHeader>
+            <Bar id="idbar_AD">
+                <contentLeft>
+                    <Title
+                        id="idAdminpageTitle"
+                        text="Admin Page"
+                        class="sapUiTinyMarginBeginEnd"
+                    />
+                </contentLeft>
+                <contentRight>
+                    <Avatar
+                        id="idAdminAvatar"
+                        displayShape="Circle"
+                        displaySize="XS"
+                        press="onPressAvatar"
+                        tooltip="User infromation"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <Button
+            id="idcreateUser_AD"
+            text="Create User"
+            icon="sap-icon://add"
+            press="onOpenCreateUserDialog"
+        />
+        <Table
+            id="idTableUSers_AD"
+            mode="SingleSelectMaster"
+            selectionChange="onSelectEmployee"
+            items="{
             path: '/Users',
             filters: [
                 { path: 'role_ID', operator: 'EQ', value1: 'RO04' },
                 { path: 'role_ID', operator: 'EQ', value1: 'RO03' }
             ]
         }"
-        width="50%"
-    >
-        <columns>
-            <Column id="idTableColumnUserID_AD">
-                <Text
-                    id="idTableTextID_AD"
-                    text="ID"
-                />
-            </Column>
-            <Column id="idTableColumnUserName_AD">
-                <Text
-                    id="idTableTextName_AD"
-                    text="Name"
-                />
-            </Column>
-            <Column id="idTableColumnUserRole_AD">
-                <Text
-                    id="idTableTextRole_AD"
-                    text="Role"
-                />
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem id="idTableColumnListItemUser_AD">
-                <cells>
+            width="50%"
+        >
+            <columns>
+                <Column id="idTableColumnUserID_AD">
                     <Text
-                        id="idTableCellTextID_AD"
-                        text="{userID}"
+                        id="idTableTextID_AD"
+                        text="ID"
                     />
+                </Column>
+                <Column id="idTableColumnUserName_AD">
                     <Text
-                        id="idTableCellTextName_AD"
-                        text="{name}"
+                        id="idTableTextName_AD"
+                        text="Name"
                     />
+                </Column>
+                <Column id="idTableColumnUserRole_AD">
                     <Text
-                        id="idTableCellTextRoleID_AD"
-                        text="{role_ID}"
+                        id="idTableTextRole_AD"
+                        text="Role"
                     />
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table>
-    <Title
-        id="idTaskInfoHeading_AD"
-        class="sapUiTinyMarginTop"
-        text="Task Information"
-        visible="false"
-    />
-    <Table
-        id="idTableTasks_AD"
-        width="50%"
-        visible="false"
-        items="{
+                </Column>
+                <Column id="idTableColumnUserDomain_AD">
+                    <Text
+                        id="idTableTextDomain_AD"
+                        text="Domain"
+                    />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="idTableColumnListItemUser_AD">
+                    <cells>
+                        <Text
+                            id="idTableCellTextID_AD"
+                            text="{userID}"
+                        />
+                        <Text
+                            id="idTableCellTextName_AD"
+                            text="{name}"
+                        />
+                        <Text
+                            id="idTableCellTextRoleID_AD"
+                            text="{role/role}"
+                        />
+                        <Text
+                            id="idTableCellTextDomain_AD"
+                            text="{domain/domain}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <Title
+            id="idTaskInfoHeading_AD"
+            class="sapUiTinyMarginTop"
+            text="Task Information"
+            visible="false"
+        />
+        <Table
+            id="idTableTasks_AD"
+            width="50%"
+            visible="false"
+            items="{
             path: '/Task'
         }"
-    >
-        <columns>
-            <Column id="idTableColumnTaskID_AD">
-                <Text
-                    id="idTableColumnTextTaskID_AD"
-                    text="Task ID"
-                />
-            </Column>
-            <Column id="idTableColumnTaskType_AD">
-                <Text
-                    id="idTableColumnTextType_AD"
-                    text="Type"
-                />
-            </Column>
-            <Column id="idTableColumnTaskPriority_AD">
-                <Text
-                    id="idTableColumnTextPriority_AD"
-                    text="Priority"
-                />
-            </Column>
-            <Column id="idTableColumnTaskAssignedAt_AD">
-                <Text
-                    id="idTableColumnTextAssignedAt_AD"
-                    text="Assigned At"
-                />
-            </Column>
-            <Column id="idTableColumnTaskComments_AD">
-                <Text
-                    id="idTableColumnTextComments_AD"
-                    text="Comments"
-                />
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem id="idTableColumnListItems_AD">
-                <cells>
+        >
+            <columns>
+                <Column id="idTableColumnTaskID_AD">
                     <Text
-                        id="idTableColumnListItemsTextID_AD"
-                        text="{ID}"
+                        id="idTableColumnTextTaskID_AD"
+                        text="Task ID"
                     />
+                </Column>
+                <Column id="idTableColumnTaskType_AD">
                     <Text
-                        id="idTableColumnListItemsTextType_AD"
-                        text="{type}"
+                        id="idTableColumnTextType_AD"
+                        text="Type"
                     />
+                </Column>
+                <Column id="idTableColumnTaskPriority_AD">
                     <Text
-                        id="idTableColumnListItemsTextPriority_AD"
-                        text="{priority}"
+                        id="idTableColumnTextPriority_AD"
+                        text="Priority"
                     />
+                </Column>
+                <Column id="idTableColumnTaskAssignedAt_AD">
                     <Text
-                        id="idTableColumnListItemsTextAssignedAt_AD"
-                        text="{assignat}"
+                        id="idTableColumnTextAssignedAt_AD"
+                        text="Assigned At"
                     />
+                </Column>
+                <Column id="idTableColumnTaskComments_AD">
                     <Text
-                        id="idTableColumnListItemsTextComments_AD"
-                        text="{comment}"
+                        id="idTableColumnTextComments_AD"
+                        text="Comments"
                     />
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="idTableColumnListItems_AD">
+                    <cells>
+                        <Text
+                            id="idTableColumnListItemsTextID_AD"
+                            text="{ID}"
+                        />
+                        <Text
+                            id="idTableColumnListItemsTextType_AD"
+                            text="{type}"
+                        />
+                        <Text
+                            id="idTableColumnListItemsTextPriority_AD"
+                            text="{priority}"
+                        />
+                        <Text
+                            id="idTableColumnListItemsTextAssignedAt_AD"
+                            text="{assignat}"
+                        />
+                        <Text
+                            id="idTableColumnListItemsTextComments_AD"
+                            text="{comment}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
 </mvc:View>
