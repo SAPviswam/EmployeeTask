@@ -34,6 +34,18 @@
             icon="sap-icon://add"
             press="onOpenCreateUserDialog"
         />
+        <Button
+            id="idcreateRole_AD"
+            text="Create Role"
+            icon="sap-icon://add"
+            press="onOpenCreateRoleDialog"
+        />
+         <Button
+            id="idcreateDomain_AD"
+            text="Create Domain"
+            icon="sap-icon://add"
+            press="onOpenCreateDomainDialog"
+        />
         <Table
             id="idTableUSers_AD"
             mode="SingleSelectMaster"

@@ -85,11 +85,48 @@ sap.ui.define([
         this._pCreateUserDialog.open();
       }
     },
+    onOpenCreateRoleDialog: function () {
+      const oView = this.getView();
     
+      if (!this._pCreateRoleDialog) {
+        Fragment.load({
+          name: "com.app.employeetask.fragments.CreateRole",
+          controller: this
+        }).then(function (oDialog) {
+          this._pCreateRoleDialog = oDialog;
+          oView.addDependent(oDialog);
+          oDialog.open();
+        }.bind(this));
+      } else {
+        this._pCreateRoleDialog.open();
+      }
+    },
+    onOpenCreateDomainDialog: function () {
+      const oView = this.getView();
+    
+      if (!this._pCreateDomainDialog) {
+        Fragment.load({
+          name: "com.app.employeetask.fragments.CreateDomain",
+          controller: this
+        }).then(function (oDialog) {
+          this._pCreateDomainDialog = oDialog;
+          oView.addDependent(oDialog);
+          oDialog.open();
+        }.bind(this));
+      } else {
+        this._pCreateDomainDialog.open();
+      }
+    },
+
     onCancelCreateUser: function () {
       this._pCreateUserDialog.close();
     },
-    
+    onCancelCreateRole: function () {
+      this._pCreateRoleDialog.close();
+    },
+    onCancelCreateDomain: function () {
+      this._pCreateDomainDialog.close();
+    },
     onSaveNewUser: async function () {
       const oView = this.getView();
       const oModel = oView.getModel(); // OData V4 model

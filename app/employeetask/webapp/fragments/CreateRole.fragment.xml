@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog
+    id="idCreateRoleDialog"
+    title="Create New Role"
+    draggable="true"
+    resizable="true"
+    contentWidth="400px"
+  >
+    <VBox id="idCreateRoleVBox" class="sapUiSmallMargin">
+      <Input id="idInputRole" placeholder="Enter Role" />
+    </VBox>
+
+    <beginButton>
+      <Button id="idCreateRoleSaveButton" text="Save" press="onSaveNewRole" />
+    </beginButton>
+    <endButton>
+      <Button id="idCreateRoleCancelButton" text="Cancel" press="onCancelCreateRole" />
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>
