@@ -1,11 +1,49 @@
-<mvc:View controllerName="com.app.employeetask.controller.Home"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    <VBox id="idForm" width="100px" >
-    <Input id="idUserID" placeholder="User ID" type="Text"></Input>
-    <Input id="idPassword" placeholder="Password" type="Password"></Input>
-    </VBox>
-    <Button id="idBtnNext" text="Next" press="onPressNxt"></Button>
-    </Page>
+<mvc:View
+  controllerName="com.app.employeetask.controller.Home"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <VBox id="idMainContainer_H" class="mainContainer">
+    <FlexBox id="idFlexBox_H"
+      direction="Row"
+      alignItems="Stretch"
+      justifyContent="Center"
+      class="loginPage">
+
+      <!-- Left Branding Side -->
+      <VBox id="idBrandingContent_H" class="brandingSection">
+        <VBox id="idLeftbrandingContent_H" class="brandingContent" justifyContent="Center" alignItems="Center">
+          <Text id="idLeftbrandingContentTitleText_H" text="GoFinance" class="titleText"/>
+          <Text id="idLeftbrandingContentSubText_H" text="The most popular peer to peer lending at SEA" class="subText"/>
+          <Button id="idLeftbrandingContentReadMoreBtn_H" text="Read More" type="Emphasized" class="readMoreBtn"/>
+        </VBox>
+
+        <!-- Animated Task Icons -->
+        <VBox id="idLeftBrandingContentAnimated_H" class="taskAnimationLayer">
+          <core:Icon id="idBrandingContentIcon1_H" src="sap-icon://task" class="taskIcon task1"/>
+          <core:Icon id="idBrandingContentIcon2_H" src="sap-icon://workflow-tasks" class="taskIcon task2"/>
+          <core:Icon id="idBrandingContentIcon3_H" src="sap-icon://workflow-tasks" class="taskIcon task3"/>
+          <core:Icon id="idBrandingContentIcon4_H" src="sap-icon://task" class="taskIcon task4"/>
+          <core:Icon id="idBrandingContentIcon5_H" src="sap-icon://employee" class="taskIcon task5"/>
+          <core:Icon id="idBrandingContentIcon6_H" src="sap-icon://employee" class="taskIcon task6"/>
+          <core:Icon id="idBrandingContentIcon7_H" src="sap-icon://people-connected" class="taskIcon task7"/>
+        </VBox>
+      </VBox>
+
+      <!-- Right Login Section -->
+      <VBox id="idBrandingContentLoginSection_H" class="loginSection" alignItems="Center" justifyContent="Center">
+        <VBox id="idRightBrandingContent_H" class="loginBox" alignItems="Stretch">
+          <Text id="idRightBrandingContentHelloText_H" text="Hello!" class="welcomeTitle"/>
+          <Text id="idRightBrandingContentWelcomeText_H" text="Welcome Back" class="welcomeSubtitle"/>
+          <Input placeholder="Email Address" id="idUserID" type="Email" class="inputField"/>
+          <Input placeholder="Password" id="idPassword" type="Password" class="inputField"/>
+          <Button id="idRightBrandingContentLoginBtn_H" text="Login" press="onPressNxt" type="Emphasized" class="loginBtn"/>
+          <Link id="idRightBrandingContentForgotLink_H" text="Forgot Password?" class="forgotLink"/>
+        </VBox>
+      </VBox>
+    </FlexBox>
+  </VBox>
 </mvc:View>
+
+

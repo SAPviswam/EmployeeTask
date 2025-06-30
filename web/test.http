@@ -64,6 +64,20 @@ Content-Type: application/json
 }
 ### GEt Users Data
 GET http://localhost:4004/TaskSRV/Users
+### Read Single User
+GET http://localhost:4004/TaskSRV/Users('User001')
+### Update User data
+PATCH   http://localhost:4004/TaskSRV/Users('User001')
+Content-Type: application/json
+
+{
+    "userID" : "User001",
+    "password" : "12345",
+    "name" : "Name1",
+    "mail" : "aemail@gmail.com",
+    "role_ID" : "RO01",
+    "domain_ID" : "DOM01"
+}
 ### Create Entries in the Users Entity
 POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json
@@ -75,6 +89,16 @@ Content-Type: application/json
     "mail" : "email@gmail.com",
     "role_ID" : "RO01",
     "domain_ID" : "DOM01"
+}
+
+
+###
+POST http://localhost:4004/TaskSRV/login
+Content-Type: application/json
+
+{
+  "userID"    : "User001",
+  "password" : "1234"
 }
 ### Create Entries in the Users Entity
 POST http://localhost:4004/TaskSRV/Users
@@ -88,6 +112,9 @@ Content-Type: application/json
     "role_ID" : "RO02",
     "domain_ID" : "DOM01"
 }
+###
+PATCH http://localhost:4004/TaskSRV/Users(User001)
+
 ### Create Entries in the Users Entity
 POST http://localhost:4004/TaskSRV/Users
 Content-Type: application/json

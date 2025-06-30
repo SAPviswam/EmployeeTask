@@ -165,7 +165,6 @@ sap.ui.define([
         console.error(err);
       }
     },    
-
     onSelectEmployee: function (oEvent) {
       // Get the selected user context
       var oTable = this.getView().byId("idTableUSers_AD");
